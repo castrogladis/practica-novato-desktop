@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --Cream: hsl(30, 38%, 92%);
+  --DarkCyan: hsl(158, 36%, 37%);
+}
+
+.main-container {
+  width: 375px;
+  height: 660px;
+  display: flex;
+  /*flex-direction: row;*/
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Cream);
+}
+
+.detail-info .image-mobile {
+  width: 330px;
+  border-radius: 10px 10px 0 0;
+  /* margin-top: 10px;*/
+}
+
+.detail-info .image-desktop {
+  display: none;
+}
+
+.main-container .detail-info div {
+  background-color: var(--White);
+  border-radius: 0 0 10px 10px;
+  padding: 15px;
+}
+.main-container .detail-info {
+  display: flex;
+  width: 330px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.detail-info .titleOne {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: var(--DarkGrayishBlue);
+  letter-spacing: 4px;
+  margin: 10px 0;
+}
+
+.detail-info .titleTwo {
+  font-size: 28px;
+  font-family: 'Fraunces', serif;
+  color: var(--VeryDarkBlue);
+  margin-bottom: 12px;
+}
+
+.detail-info .content {
+  font-size: 17px;
+  color: var(--DarkGrayishBlue);
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+
+.price-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.price-container .price1 {
+  color: var(--DarkCyan);
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.price-container .price2 {
+  color: var(--DarkGrayishBlue);
+  text-decoration: line-through;
+}
+
+.container-button {
+  width: 100%;
+  cursor: pointer;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  font-family: 'Fraunces', serif;
+  letter-spacing: 1px;
+  color: var(--Cream);
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--DarkCyan);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.button a {
+  text-decoration: none;
+  color: var(--Cream);
+}
+.button img {
+  display: flex;
+  margin-top: 0;
+  width: 15px;
+  height: 25px;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+@media (min-width: 376px) {
+  .detail-info .image-mobile {
+    display: none;
+  }
+
+  .main-container {
+    width: 100%;
+  }
+
+  .detail-info {
+    display: flex;
+  }
+
+  .detail-info .image-desktop {
+    display: block;
+  }
+}
